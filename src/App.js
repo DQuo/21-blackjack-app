@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { ChakraProvider, Box, Grid, theme, Button, Image, Center, Flex, GridItem, Heading } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
+
+
+
+
 const cardValue = (value) => {
   switch (value) {
     case '2':
@@ -34,6 +38,7 @@ const cardValue = (value) => {
       return;
   }
 }
+
 
 function App() {
   const [deck, setDeck] = useState(null);
@@ -86,6 +91,7 @@ function App() {
     console.log('new game useffect')
   }, [newGame]);
 
+  
 
   const checkForWinner = async () => {
     if (playerScore === 21 && computerScore === 21) {
